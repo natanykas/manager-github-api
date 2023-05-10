@@ -37,4 +37,4 @@ docker-compose run web rake spec PGUSER=postgres RAILS_ENV=test
 
 *Colection Postman*
 
-https://www.getpostman.com/collections/7fdecab4bb9bc6d9d14f
+https://planetary-water-696254.postman.co/workspace/Projetos~db86da9f-6551-4319-b5d7-600686c7a370/collection/1158207-a6501abb-9894-4e6b-a5cf-606e21130e95?action=share&creator=1158207
