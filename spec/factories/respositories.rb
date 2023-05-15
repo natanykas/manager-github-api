@@ -5,4 +5,3 @@ FactoryBot.define do
       name { bdd_course }
     end
 end
-  
