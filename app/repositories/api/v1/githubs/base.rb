@@ -5,7 +5,6 @@ module Api
     module Githubs
       class Base
         GITHUB_URL = 'https://api.github.com/'
-        TOKEN = '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'
 
         def self.api
           Faraday.new(url: GITHUB_URL) do |builder|
@@ -14,8 +13,6 @@ module Api
             builder.adapter(Faraday.default_adapter)
 
             builder.headers['Content-Type'] = 'application/json'
-
-            builder.request :authorization, 'Bearer', TOKEN
           end
         end
       end
