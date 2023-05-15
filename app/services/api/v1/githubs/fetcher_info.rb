@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     module Githubs
@@ -23,6 +25,7 @@ module Api
         end
 
         private
+
         def fetch_github_info
           self.github_info = Githubs::FetchInfo.find(username)
 
