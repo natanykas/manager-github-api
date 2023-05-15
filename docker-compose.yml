@@ -6,6 +6,15 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+  sidekiq:
+    build: .
+    command: bundle exec sidekiq
+    depends_on:
+      - redis
+    links:
+      - redis
+  redis:
+    image: redis
 
   web:
     build: .
