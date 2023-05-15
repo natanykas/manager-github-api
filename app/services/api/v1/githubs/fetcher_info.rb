@@ -30,11 +30,14 @@ module Api
             self.error_message = 'No repository found to this username'
             return false
           end
+
+          true
         end
 
         def sync_info
           github_info.each do |key, value|
-            Repository.find_or_create_by(user_id: user.id, name: key, star: value)
+            repository = Repository.find_or_create_by(user_id: user.id, name: key)
+            repository.update(star: value)
           end
         end
 
